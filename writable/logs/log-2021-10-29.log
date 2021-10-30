@@ -1,0 +1,30 @@
+CRITICAL - 2021-10-29 20:58:08 --> The framework needs the following extension(s) installed and loaded: intl.
+#0 D:\Program Files\Xampp\htdocs\futureseekers\system\CodeIgniter.php(218): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
+#1 D:\Program Files\Xampp\htdocs\futureseekers\system\CodeIgniter.php(176): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+#2 D:\Program Files\Xampp\htdocs\futureseekers\system\bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#3 D:\Program Files\Xampp\htdocs\futureseekers\public\index.php(28): require('D:\\Program File...')
+#4 {main}
+CRITICAL - 2021-10-29 20:58:26 --> The framework needs the following extension(s) installed and loaded: intl.
+#0 D:\Program Files\Xampp\htdocs\futureseekers\system\CodeIgniter.php(218): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
+#1 D:\Program Files\Xampp\htdocs\futureseekers\system\CodeIgniter.php(176): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+#2 D:\Program Files\Xampp\htdocs\futureseekers\system\bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#3 D:\Program Files\Xampp\htdocs\futureseekers\public\index.php(28): require('D:\\Program File...')
+#4 {main}
+CRITICAL - 2021-10-29 20:58:40 --> The framework needs the following extension(s) installed and loaded: intl.
+#0 D:\Program Files\Xampp\htdocs\futureseekers\system\CodeIgniter.php(218): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
+#1 D:\Program Files\Xampp\htdocs\futureseekers\system\CodeIgniter.php(176): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+#2 D:\Program Files\Xampp\htdocs\futureseekers\system\bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#3 D:\Program Files\Xampp\htdocs\futureseekers\public\index.php(28): require('D:\\Program File...')
+#4 {main}
+CRITICAL - 2021-10-29 20:59:31 --> The framework needs the following extension(s) installed and loaded: intl.
+#0 D:\Program Files\Xampp\htdocs\futureseekers\system\CodeIgniter.php(218): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
+#1 D:\Program Files\Xampp\htdocs\futureseekers\system\CodeIgniter.php(176): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+#2 D:\Program Files\Xampp\htdocs\futureseekers\system\bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#3 D:\Program Files\Xampp\htdocs\futureseekers\public\index.php(28): require('D:\\Program File...')
+#4 {main}
+CRITICAL - 2021-10-29 20:59:35 --> The framework needs the following extension(s) installed and loaded: intl.
+#0 D:\Program Files\Xampp\htdocs\futureseekers\system\CodeIgniter.php(218): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
+#1 D:\Program Files\Xampp\htdocs\futureseekers\system\CodeIgniter.php(176): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+#2 D:\Program Files\Xampp\htdocs\futureseekers\system\bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#3 D:\Program Files\Xampp\htdocs\futureseekers\public\index.php(28): require('D:\\Program File...')
+#4 {main}

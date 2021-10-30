@@ -1,0 +1,42 @@
+.img{
+    margin: 15px;
+    opacity: 40%;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+.heading h1{
+    font-family: 'Poppins', sans-serif;
+    font-size:  35px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    border-bottom: 3px solid #fff;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 10px 20px;
+}
+.gid
+{
+    font-family: 'Poppins', sans-serif;
+    position: absolute;
+    top: 60%;
+    left: 40%;
+}
+.gid a{
+    position: relative;
+    display: inline-flex;
+    padding: 12px  36px;
+    margin: 10px 0;
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    letter-spacing: 3px;
+    border-radius: 40px;
+    background: rgb(95, 86, 180);
+}
+a:nth-child(2)
+{
+    background:rgb(95, 86, 180);
+}
