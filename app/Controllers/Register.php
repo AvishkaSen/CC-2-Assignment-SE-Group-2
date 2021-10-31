@@ -11,8 +11,7 @@ class Register extends BaseController
         return view('register.php');  
     }
     
-    // validation must be checked
-    /*
+
     public function create() {
 
         $validation =  \Config\Services::validation(); // Validation library is loaded
@@ -36,13 +35,14 @@ class Register extends BaseController
             // CREATING THE SESSION AND SAVING USER INFO INTO IT
             $session = session(); // initialize the session
             $session->set('UserID', $user -> id); 
-            $session->set('Name', $user -> name); 
-            $session->set('Email', $user -> email);  
-            $session->set('PhoneNo', $user -> phone_no);  
-            $session->set('Dob', $user -> dob);  
+            $session->set('FName', $user -> fname); 
+            $session->set('LName', $user -> lname); 
+            $session->set('Email', $user -> email);
+            $session->set('Type', $user -> email);  
             
             // Redirects user to the Welcome page upon successful registration
-            return redirect()->to("/Welcome/index"); 
+            // return redirect()->to("/Welcome/index"); 
+            return view('register'); 
 
         } else {
 
@@ -55,10 +55,10 @@ class Register extends BaseController
             echo "<b style='color:red;'> ". implode("<br>", $errorArray) . "</b>"; // Then I display the list of errors in an echo 
             echo "<br><br>";
             
-            return view('Register/index'); 
+            return view('register'); 
 
         }
 
-    }*/
+    }
 }
 ?>
