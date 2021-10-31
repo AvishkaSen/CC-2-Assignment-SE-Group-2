@@ -42,7 +42,7 @@ class Register extends BaseController
             
             // Redirects user to the Welcome page upon successful registration
             // return redirect()->to("/Welcome/index"); 
-            return view('register'); 
+            return view('login'); 
 
         } else {
 
