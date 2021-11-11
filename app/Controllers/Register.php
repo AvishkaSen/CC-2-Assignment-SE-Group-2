@@ -28,31 +28,17 @@ class Register extends BaseController
             $model = new \App\Models\userModel;
             $model->insert($users); 
             
-            // For the sessions
-            $email = $this->request->getPost('email');
-            $user = $model->where('email', $email) -> first();
-
-            // CREATING THE SESSION AND SAVING USER INFO INTO IT
-            $session = session(); // initialize the session
-            $session->set('UserID', $user -> id); 
-            $session->set('FName', $user -> fname); 
-            $session->set('LName', $user -> lname); 
-            $session->set('Email', $user -> email);
-            $session->set('Type', $user -> email);  
-            
-            // Redirects user to the Welcome page upon successful registration
-            // return redirect()->to("/Welcome/index"); 
             return view('login'); 
 
         } else {
 
             // if the validations fail
             
-            echo "<b style='color:red;'> Error: </b>";
+            echo "<b style='color:white;'> Error: </b>";
             echo "<br><br>";
 
             $errorArray = $validation->getErrors(); // Loads an array of the custom error messages I created in "app/Config/Validation.php" file!!
-            echo "<b style='color:red;'> ". implode("<br>", $errorArray) . "</b>"; // Then I display the list of errors in an echo 
+            echo "<b style='color:white;'> ". implode("<br>", $errorArray) . "</b>"; // Then I display the list of errors in an echo 
             echo "<br><br>";
             
             return view('register'); 

@@ -3,9 +3,9 @@
 }
 .heading h1{
     font-family: 'Poppins', sans-serif;
-    font-size:  30px;
+    font-size:  40px;
     text-transform: uppercase;
-    letter-spacing: 5px;
+    letter-spacing: 10px;
     border-bottom: 3px solid #fff;
     position: absolute;
     top: 10%;
@@ -18,11 +18,15 @@
     height: auto;
     color: #fff;
     position: relative;
-    top: 30%;
+    top: 20%;
     padding: 10px 10px;
     margin: 5px;
     display: grid;
     grid-template-columns: 1fr 1fr;
+}
+.bg-login{
+    width: 100%;
+    height: 90%;
 }
 .bx1{
     justify-content: center;
@@ -58,45 +62,45 @@
     align-items: center;
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
+    height: 400px;
 }
 .form h2{
     justify-content: center;
     text-align: center;
 }
 
-.bx2
+.form .bx2
 {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     margin: 10px;
     padding: 10px;
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
 }
-.bx2 input{
-    margin: 5px;
+.form .bx2 input{
+    margin: 15px;
     padding: 10px;
     justify-content: center;
     text-align: center;
     border-radius: 20px;
     border: none;
 }
-.bx2 button{
+.form .bx2 .btn{
     margin: 5px;
     padding: 10px;
     background: transparent;
     border: none;
-    border: solid  #ffffff;
     border-radius: 20px;
     font-family: 'Poppins', sans-serif;
 }
-.bx2 .link{
+.form .bx2 .link{
     margin: 5px;
     padding: 10px;
     justify-content: center;
     text-align: center;
 }
-.bx2  .reg{
+.form .bx2  .reg{
     margin: 5px;
     padding: 10px;
     justify-content: center;
@@ -104,7 +108,7 @@
     font-size: 20px;
     background-color:rgba(0, 0, 0, 0.315) ;
     border-radius:20px ;
+    color: #fff;
 }
-
 
 

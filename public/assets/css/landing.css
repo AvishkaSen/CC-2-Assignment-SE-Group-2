@@ -7,9 +7,9 @@
 }
 .heading h1{
     font-family: 'Poppins', sans-serif;
-    font-size:  35px;
+    font-size:  45px;
     text-transform: uppercase;
-    letter-spacing: 5px;
+    letter-spacing:10px;
     border-bottom: 3px solid #fff;
     position: absolute;
     top: 40%;
@@ -22,13 +22,16 @@
     font-family: 'Poppins', sans-serif;
     position: absolute;
     top: 60%;
-    left: 40%;
+    left: 38%;
+    justify-content: center;
+    align-items: center;
+
 }
 .gid a{
     position: relative;
     display: inline-flex;
     padding: 12px  36px;
-    margin: 10px 0;
+    margin: 5px 10px;
     color: #fff;
     text-decoration: none;
     font-size: 20px;

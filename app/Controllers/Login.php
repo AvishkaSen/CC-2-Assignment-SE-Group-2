@@ -10,8 +10,7 @@ class Login extends BaseController
         // Redirects the user to the login page when the button is clicked in the home page
         return view('login.php');  
     }
-    //validation must be checked
-    /*
+  
     public function create(){
 			
 			$model = new \App\Models\userModel; // Gets the database
@@ -19,6 +18,7 @@ class Login extends BaseController
 			// Gets the email and password values from the form
 			$email = $this->request->getPost('email'); 
 			$password = $this->request->getPost('password'); 
+			//$type = $this->request->getPost('type'); 
 
 			$user = $model->where('email', $email) -> first();
 
@@ -27,31 +27,58 @@ class Login extends BaseController
 			if($user !== null && password_verify($password, $user->password)) 
 			{
 				// If login was successful
-
+		
 				// CREATING THE SESSION AND SAVING USER INFO INTO IT
 				$session = session(); // initialize the session
 				$session->set('UserID', $user -> id); 
-				$session->set('Name', $user -> name); 
+				$session->set('First Name', $user -> fname); 
+				$session->set('Last Name', $user -> lname); 
 				$session->set('Email', $user -> email); 
-				$session->set('PhoneNo', $user -> phone_no);  
-				$session->set('Dob', $user -> dob); 
+				$session->set('Type of User', $user -> type);
 
-
-				return view("Welcome/index"); // goes to the welcome page after a successful login
-
+				//return view("home");
+				
+				if($_SESSION["Type of User"] == "Applicant")
+				{
+					//if the user is registered as an applicant he/she is directed to the Applicant home page
+					//$this->load->view('Applicant');
+					return view("Applicant");
+				}
+				else if($_SESSION["Type of User"] == "Company")
+				{
+					//if the user is registered as an applicant he/she is directed to the Applicant home page
+					//$this->load->view('Company');
+					return view("Company");
+				}
+				
+				else if($_SESSION["Type of User"] == "Admin")
+				{
+					//if the user is registered as an applicant he/she is directed to the Applicant home page
+					//$this->load->view('Admin');
+					return view("Admin");
+				}
+				 // goes to the welcome page after a successful login
+				 //return view("WelcomeApplicant/index");
 			}
 			else {
 
 				// if login was not sucessful, displaying error
-				echo "<b style='color:red;'> Error: </b>";
+				//css design
+				echo "<b style='color:red; 
+				background:#fff; 
+				border-radius:20px;'> Error: </b>";
 				echo "<br><br>";
-				echo "<b style='color:red;'> LOGIN WAS NOT SUCCESSFUL! PLEASE DOUBLE CHECK YOUR ENTRIES! </b> <br>";
-				echo "<b style='color:red;'> OR USER DOES NOT EXIST! </b>";
+				echo "<b style='color:red;
+				background:#fff;
+				border-radius:20px;'> LOGIN WAS NOT SUCCESSFUL! PLEASE DOUBLE CHECK YOUR ENTRIES! </b> <br>";
+				echo "<b style='color:red;
+				background:#fff;
+				border-radius:20px;'> OR USER DOES NOT EXIST! </b>";
 				echo "<br><br>";
 				
-				return view("Login/index");
+				return view("login");
 
 		}
-    }*/
+    }
 }
 ?>

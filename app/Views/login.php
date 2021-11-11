@@ -20,19 +20,19 @@
     </div>
     <div class="content">
         <div class="bx1">
-            <p>We need to make sure we're creating spaces to create new leaders and new types of leadership.</p>
-            
-            <p><br>Alicia Garza</p>
+        <img src="<?php echo base_url(' /assets/img/bg-login.png') ?>" alt="bg-login" class="bg-login">
         </div>
         <div class="form">
             <h2>Login Here</h2>
-            <div class="bx2">
-            <input type="email" name="email" placeholder="Enter Email">
-            <input type="password" name="password" placeholder="Enter Password">
-            <button class="btn"><a href="#">Login</a></button>
-            <p class="link">Don't have an account</p>
-            <a class="reg" href="<?php echo base_url('Register/index')?>">Register Here</a>
-        </div>
+            <div>
+                <form action="<?php echo base_url('Login/create')?>" method="POST"  class="bx2">
+                    <input type="email" name="email" placeholder="Enter Email">
+                    <input type="password" name="password" placeholder="Enter Password">
+                    <input type="submit" value="Login" class="btn reg">
+                    <p class="link">Don't have an account</p>
+                    <a class="reg" href="<?php echo base_url('Register/index')?>">Register Here</a>
+                </form>
+            </div>
         </div>
     </div>
 </body>

@@ -21,44 +21,31 @@
         <div class="heading">
             <h1>FutureSeekers</h1>
         </div>
-
-        <div class="card">
-            <div class="details">
-                <div class="content">
-                    
-                    <div class="head">
-                        <h2>Register Here:</h2>
-                    </div>
-
-                    <form class="frm" action=<?php echo site_url('Register/Create')?> method="post">
-
-                        
-                        <input type="text" name="fname" id="fname" placeholder="First Name"> <!-- First Name -->
-                        <br>
-                        
-                        <input type="text" name="lname" id="lname" placeholder="Last Name"> <!-- Last Name -->
-                        <br>
-                        
-                        <input type="text" name="email" id="email" placeholder="E-mail Address"> <!-- Email -->
-                        <br>
-                        
-                        <input type="password" name="password" id="password" placeholder="Password"> <!-- Password -->
-                        <br>
-                        
-                        <input type="password" name="pass_confirm" id="pass_confirm" placeholder="Confirm Password"> <!-- Confirm Password -->
-                        <br>
-
-                        <div class="choice"> 
-                            <input type="radio" name="type" value="Company"> <span>Company</span>
-                            <input type="radio" name="type" value="Applicant"> <span>Applicant</span>
+        <div class="grid-bx">
+            <div class="card">
+                <div class="details">
+                    <div class="content"> 
+                        <div class="head">
+                            <h2>Register Here</h2>
                         </div>
-
-                        <input type="submit" value="Submit" class="button">
-                        <br><br>
-
-                    </form>
+                        <form class="frm" action=<?php echo site_url('Register/Create')?> method="post">
+                            <input type="text" name="fname" id="fname" placeholder="First Name"> <!-- First Name -->
+                            <input type="text" name="lname" id="lname" placeholder="Last Name"> <!-- Last Name -->
+                            <input type="text" name="email" id="email" placeholder="E-mail Address"> <!-- Email -->
+                            <input type="password" name="password" id="password" placeholder="Password"> <!-- Password -->
+                            <input type="password" name="pass_confirm" id="pass_confirm" placeholder="Confirm Password"> <!-- Confirm Password -->
+                            <div class="choice"> 
+                                <input type="radio" name="type" value="Company"> <span>Company</span>
+                                <input type="radio" name="type" value="Applicant"> <span>Applicant</span>
+                            </div>
+                            <input type="submit" value="Submit" class="button">
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
+            <div class="bg-img">
+                        <img src="<?php echo base_url(' /assets/img/bg-reg.png') ?>" alt="bg-reg" class="bg-reg">
+                    </div>
+            </div>
     </body>
 </html>
