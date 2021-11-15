@@ -20,7 +20,7 @@
         <nav>
             <ul class="nav-links">
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Jobs</a></li>
+                <li><a href="<?php echo base_url('Jobs/index')?>">Jobs</a></li>
                 <li><a href="#">Upload Resume</a></li>
                 <li><a href="#">About Us</a></li>
                 <li><a href="#">Contact Us</a></li>

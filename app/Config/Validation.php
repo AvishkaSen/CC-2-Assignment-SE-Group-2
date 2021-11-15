@@ -39,6 +39,15 @@ class Validation
         'email' => 'required|valid_email',
     ];
 
+    // THESE ARE THE CUSTOM VALIDATION RULES THAT WILL BE USED FOR THE Adverts FORM !!!!!! /////
+    public $adverts=[
+        'jobname'=>'required',
+        'category'=>'required',
+        'description'=>'required',
+    ];
+
+
+
 	// CUSTOM ERROR MESSAGES FOR THE VALIDATIONS THAT I SET UP !!!!!! /////
 	public $registration_errors = [
 
@@ -66,6 +75,13 @@ class Validation
 
 	];
 
+    // CUSTOM ERROR MESSAGES FOR THE Adverts VALIDATIONS THAT I SET UP !!!!!! /////
+
+    public $adverts_errors=[
+        'jobname' => ['required'=>'Job title section is required!'],
+        'category' => ['required'=>'Catergory section is required!'],
+        'description' => ['required'=>'Description section is required!']
+    ];
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	

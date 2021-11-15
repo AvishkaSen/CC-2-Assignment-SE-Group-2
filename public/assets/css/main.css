@@ -2,8 +2,9 @@
 {
     margin: 0;
     padding: 0;
-    box-sizing: 0;
     text-decoration: none;
     overflow-x: hidden;
-    overflow-y: hidden;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    overflow-y: auto;
 }

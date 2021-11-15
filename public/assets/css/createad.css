@@ -1,0 +1,16 @@
+.container{
+    margin: 20px 0;
+}
+.container .row .col-md-9 .card{
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+    color: #fff; ;
+}
+.container .row .col-md-9 .card .card-header{
+    background: rgb(0, 0, 0,0.2);
+    font-size: 25px;
+}
+.container .row .col-md-9 .card .card-body{
+    background: rgb(0, 0, 0,0.2);
+    font-size: 18px;
+}

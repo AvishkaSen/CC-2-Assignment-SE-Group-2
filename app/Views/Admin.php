@@ -36,7 +36,7 @@
             <span class="admin-head">Administration</span>
             <div class="dashboard">
                 <a href="#" class="btn">Approvals</a>
-                <a href="#" class="btn">Posting</a>
+                <a href="<?php echo base_url('Admin/index')?>" class="btn">Job Adverts</a>
                 <a href="#" class="btn">Reports</a> 
             </div>
             <div class="wrapper">

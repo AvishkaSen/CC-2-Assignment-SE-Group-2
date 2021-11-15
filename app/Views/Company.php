@@ -19,9 +19,9 @@
         <h1 class="heading">FutureSeekers</h1>
         <nav>
             <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Jobs</a></li>
-                <li><a href="#">Create Job Advert</a></li>
+                <li><a href="<?php echo base_url('Home/CompanyHome')?>">Home</a></li>
+                <li><a href="<?php echo base_url('Postings/index')?>">My Adverts</a></li>
+                <li><a href="<?php echo base_url('Createad/index')?>">Create Job Advert</a></li>
                 <li><a href="#">About Us</a></li>
                 <li><a href="#">Contact Us</a></li>
             </ul>
