@@ -22,7 +22,7 @@
         <h1 class="heading">FutureSeekers</h1>
         <nav>
             <ul class="nav-links">
-                <li><a href="#">Home</a></li>
+                <li><a href="<?php echo base_url('Home/ApplicantHome')?>">Home</a></li>
                 <li><a href="<?php echo base_url('Jobs/index')?>">Jobs</a></li>
                 <li><a href="#">Upload Resume</a></li>
                 <li><a href="#">About Us</a></li>
@@ -33,73 +33,47 @@
     </header>
 
     <!--creating ad card-->
-    <div class="ad">    
-        <div class="card" style="width: 18rem;">
-            <!--php code -->
-                <?php if($adverts):?>
-                    <?php foreach($adverts as $row):?>
-                        <div class="card-body">
-                            <h5 class="card-title"><?php echo $row['jobname'] ?></h5>
-                            <span class="card-text"><?php echo $row['category'] ?></span>
-                            <p class="card-text"><?php echo $row['description'] ?></p>
-                        </div>
-                    <?php endforeach; ?>
-                <?php endif ?>
-            <div class="card-body">
-                <a href="#" class="card-link btn btn-info">View</a>
-                <a href="#" class="card-link btn btn-warning">Favourite</a>
-            </div>
-        </div>
-
-        <div class="card" style="width: 18rem;">
-            <!-- <img src="<?php echo base_url(' /assets/img/career.jpeg') ?>" class="card-img-top" alt=""> -->
-            <div class="card-body">
-                <h5 class="card-title">Job title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-            <!--
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">Requirment 1</li>
-                <li class="list-group-item">Requirment 2</li>
-                <li class="list-group-item">Requirment 3</li>
-            </ul> -->
-            <div class="card-body">
-                <a href="#" class="card-link btn btn-info">View</a>
-                <a href="#" class="card-link btn btn-warning">Favourite</a>
-            </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-            <!-- <img src="<?php echo base_url(' /assets/img/career.jpeg') ?>" class="card-img-top" alt=""> -->
-            <div class="card-body">
-                <h5 class="card-title">Job title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-            <!--
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">Requirment 1</li>
-                <li class="list-group-item">Requirment 2</li>
-                <li class="list-group-item">Requirment 3</li>
-            </ul> -->
-            <div class="card-body">
-                <a href="#" class="card-link btn btn-info">View</a>
-                <a href="#" class="card-link btn btn-warning">Favourite</a>
-            </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-            <!-- <img src="<?php echo base_url(' /assets/img/career.jpeg') ?>" class="card-img-top" alt=""> -->
-            <div class="card-body">
-                <h5 class="card-title">Job title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-            <!--
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">Requirment 1</li>
-                <li class="list-group-item">Requirment 2</li>
-                <li class="list-group-item">Requirment 3</li>
-            </ul> -->
-            <div class="card-body">
-                <a href="#" class="card-link btn btn-info">View</a>
-                <a href="#" class="card-link btn btn-warning">Favourite</a>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 mt-5">
+                <?php
+                if(session()->getFlashdata('status')){
+                    echo "<h5>".session()->getFlashdata('status')."</h5>";
+                }
+                ?>
+                <div class="card">
+                    <div class="card-header">
+                        <h4>My Advertisment</h4>
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Job Title</th>
+                                    <th>Category</th>
+                                    <th>Description</th>
+                                    <th>Apply</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            <?php
+                                  require_once('DB.php');
+                                  for ($i = 0; $row = $result->fetch(); $i++)
+                                  {
+                                ?>
+                                    <tr>
+                                        <td><?php echo $row ['jobname'] ?></td>
+                                        <td><?php echo $row ['category'] ?></td>
+                                        <td><?php echo $row ['description'] ?></td>
+                                        <td>
+                                            <a href="<?php echo base_url(''.$row['id'])?>" class="btn btn-primary">Apply</a>
+                                        </td>
+                                    </tr>
+                                <?php } ?>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
