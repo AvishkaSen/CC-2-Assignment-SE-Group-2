@@ -22,9 +22,10 @@
         <h1 class="heading">FutureSeekers</h1>
         <nav>
             <ul class="nav-links">
-                <li><a href="<?php echo base_url('')?>">Home</a></li>
+                <li><a href="<?php echo base_url('Home/AdminHome')?>">Home</a></li>
+                <li><a href="<?php echo base_url('Admin/users')?>">Users</a></li>
                 <li><a href="<?php echo base_url('')?>">Approvals</a></li>
-                <li><a href="<?php echo base_url('')?>">Job Adverts</a></li>
+                <li><a href="<?php echo base_url('Admin/index')?>">Job Adverts</a></li>
                 <li><a href="<?php echo base_url('')?>">Reports</a></li>
             </ul>
         </nav>
@@ -35,39 +36,38 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 mt-5">
-                <?php
-                if(session()->getFlashdata('status')){
-                    echo "<h5>".session()->getFlashdata('status')."</h5>";
-                }
-                ?>
+                
                 <div class="card">
                     <div class="card-header">
-                        <h4>My Advertisment</h4>
+                        <h4>Advertisment</h4>
                     </div>
                     <div class="card-body">
                         <table class="table table-bordered">
                             <thead>
                                 <tr>
+                                    <th>Advert ID</th>
                                     <th>Job Title</th>
                                     <th>Category</th>
                                     <th>Description</th>
-                                    <th></th>
+                                    <th>Remove</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php foreach(session() as $row ) :?>
-                                <tr>
-                                    <td><? echo $row['id'] ?></td>
-                                    <td><?= $row['jobname'] ?></td>
-                                    <td><?= $row['category'] ?></td>
-                                    <td><?= $row['description'] ?></td>
-                                    <td>
-                                        <!--<a href="<?php echo base_url('Createad/edit/'.$row['id'])?>" class="btn btn-success float-end btn-sm">Edit</a>
-                                        <a href="<?php echo base_url('Createad/delete/'.$row['id'])?>" class="btn btn-danger float-end btn-sm">Delete</a>-->
-                                    </td>
-                                    
-                                </tr>
-                                <?php endforeach; ?>
+                            <?php
+                                  require_once('DB.php');
+                                  for ($i = 0; $row = $result->fetch(); $i++)
+                                  {
+                                ?>
+                                    <tr>
+                                        <td><?php echo $row ['id'] ?></td>
+                                        <td><?php echo $row ['jobname'] ?></td>
+                                        <td><?php echo $row ['category'] ?></td>
+                                        <td><?php echo $row ['description'] ?></td>
+                                        <td>
+                                            <a href="<?php echo base_url('Admin/deletead/'.$row['id'])?>" class="btn btn-danger float-end btn-sm">Remove</a>
+                                        </td>
+                                    </tr>
+                                <?php } ?>
                             </tbody>
                         </table>
                     </div>

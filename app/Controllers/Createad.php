@@ -26,12 +26,12 @@ class Createad extends BaseController
             $model->insert($ads); 
             
             // CREATING THE SESSION AND SAVING ads INFO INTO IT
-				$session = session(); // initialize the session
-				$session->set('jobname', $ads -> jobname); 
-				$session->set('category', $ads -> category); 
-				$session->set('description', $ads -> description); 
-				
-                return redirect()->to(base_url('myads'))->with('status','Advert Created Successfully');
+            $session = session(); // initialize the session
+            $session->set('jobname', $ads -> jobname); 
+            $session->set('category', $ads -> category); 
+            $session->set('description', $ads -> description); 
+            
+            return view('createad'); 
 
         } else {
 
@@ -49,11 +49,12 @@ class Createad extends BaseController
         }
 
     }
+    
     public function delete($id)
     {
         $model = new \App\Models\adModel;
         $model->delete($id);
-        return redirect()->to(base_url('myads'))->with('status','Advert Deleted Successfully');
+        return view('myads');
     }
 }
 ?>

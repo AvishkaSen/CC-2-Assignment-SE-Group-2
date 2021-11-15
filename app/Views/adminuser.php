@@ -22,11 +22,11 @@
         <h1 class="heading">FutureSeekers</h1>
         <nav>
             <ul class="nav-links">
-                <li><a href="<?php echo base_url('Home/CompanyHome')?>">Home</a></li>
-                <li><a href="<?php echo base_url('Postings/index')?>">My Adverts</a></li>
-                <li><a href="<?php echo base_url('Createad/index')?>">Create Job Advert</a></li>
-                <li><a href="<?php echo base_url('')?>">About Us</a></li>
-                <li><a href="<?php echo base_url('')?>">Contact Us</a></li>
+                <li><a href="<?php echo base_url('Home/AdminHome')?>">Home</a></li>
+                <li><a href="<?php echo base_url('Admin/users')?>">Users</a></li>
+                <li><a href="<?php echo base_url('')?>">Approvals</a></li>
+                <li><a href="<?php echo base_url('Admin/ads')?>">Job Adverts</a></li>
+                <li><a href="<?php echo base_url('')?>">Reports</a></li>
             </ul>
         </nav>
         <a href="#" class="cta">Logout</a>
@@ -38,36 +38,35 @@
             <div class="col-md-12 mt-5">
                 <div class="card">
                     <div class="card-header">
-                        <h4>My Advertisment</h4>
+                        <h4>Users</h4>
                     </div>
                     <div class="card-body">
                         <table class="table table-bordered">
                             <thead>
                                 <tr>
-                                    <th>Advert ID</th>
-                                    <th>Job Title</th>
-                                    <th>Category</th>
-                                    <th>Description</th>
-                                    <th>Remove</th>
-                                    
+                                    <th>User ID</th>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Email</th>
+                                    <th>Type of User</th>
+                                    <th>Delete</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php
-                                  require_once('DB.php');
+                            <?php
+                                  require_once('DBuser.php');
                                   for ($i = 0; $row = $result->fetch(); $i++)
                                   {
                                 ?>
                                     <tr>
                                         <td><?php echo $row ['id'] ?></td>
-                                        <td><?php echo $row ['jobname'] ?></td>
-                                        <td><?php echo $row ['category'] ?></td>
-                                        <td><?php echo $row ['description'] ?></td>
+                                        <td><?php echo $row ['fname'] ?></td>
+                                        <td><?php echo $row ['lname'] ?></td>
+                                        <td><?php echo $row ['email'] ?></td>
+                                        <td><?php echo $row ['type'] ?></td>
                                         <td>
-                                            <!--<a href="<?php echo base_url('Createad/edit/'.$row['id'])?>" class="btn btn-success float-end btn-sm">Edit</a>-->
-                                            <a href="<?php echo base_url('Createad/delete/'.$row['id'])?>" class="btn btn-danger float-end btn-sm">Delete</a>
+                                            <a href="<?php echo base_url('Admin/deleteuser/'.$row['id'])?>" class="btn btn-danger float-end btn-sm">Remove</a>
                                         </td>
-                                        
                                     </tr>
                                 <?php } ?>
                             </tbody>

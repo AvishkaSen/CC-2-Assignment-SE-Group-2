@@ -17,15 +17,7 @@
 <body>
     <header>
         <h1 class="heading">FutureSeekers</h1>
-        <!--<nav>
-            <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Jobs</a></li>
-                <li><a href="#">Career Advice</a></li>
-                <li><a href="#">Upload Resume</a></li>
-                <li><a href="#">About Us</a></li>
-            </ul>
-        </nav>-->
+
         <a href="#" class="cta">Logout</a>
     </header>
     <div class="bx1">
@@ -36,7 +28,8 @@
             <span class="admin-head">Administration</span>
             <div class="dashboard">
                 <a href="#" class="btn">Approvals</a>
-                <a href="<?php echo base_url('Admin/index')?>" class="btn">Job Adverts</a>
+                <a href="<?php echo base_url('Admin/users')?>" class="btn">Users</a>
+                <a href="<?php echo base_url('Admin/ads')?>" class="btn">Job Adverts</a>
                 <a href="#" class="btn">Reports</a> 
             </div>
             <div class="wrapper">
@@ -53,21 +46,6 @@
         </div>
     </div>
 
-    <!--
-    <div class="bx2">
-        <h2>Popular Search</h2>
-        <div class="cnt2">
-            <ul>
-                <li><i class="fa fa-search"></i><a href="#">Bussiness Analyst</a></li>
-                <li><i class="fa fa-search"></i><a href="#">Software Engineer</a></li>
-                <li><i class="fa fa-search"></i><a href="#">Part-time</a></li>
-                <li><i class="fa fa-search"></i><a href="#">Finance</a></li>
-                <li><i class="fa fa-search"></i><a href="#">Work form home</a></li>
-                <li><i class="fa fa-search"></i><a href="#">Administration</a></li>
-                <li><i class="fa fa-search"></i><a href="#">Work from Home</a></li>
-            </ul>
-        </div>
-    </div>-->
     <footer>
         <div class="row">
         <div class="col desc">
