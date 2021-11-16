@@ -15,3 +15,4 @@ class adModel extends \CodeIgniter\Model
 }
 
 ?>
+

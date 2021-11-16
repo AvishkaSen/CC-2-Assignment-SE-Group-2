@@ -52,7 +52,7 @@
         <h2>Popular Search</h2>
         <div class="cnt2">
             <ul>
-                <li><i class="fa fa-search"></i><a href="#">Bussiness Analyst</a></li>
+                <li><i class="fa fa-search"></i><a href="#">Business Analyst</a></li>
                 <li><i class="fa fa-search"></i><a href="#">Software Engineer</a></li>
                 <li><i class="fa fa-search"></i><a href="#">Part-time</a></li>
                 <li><i class="fa fa-search"></i><a href="#">Finance</a></li>
@@ -149,3 +149,5 @@
     </footer>
 </body>
 </html>
+
+
